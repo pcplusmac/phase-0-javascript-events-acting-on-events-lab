@@ -19,4 +19,23 @@ function moveDodgerRight() {
   }
 
 //   Add event listener
+document.addEventListener("keydown", function (e) {
+    
+    // Switch 'e' key value
+    switch(e.key) {
+        case "ArrowLeft":
+            moveDodgerLeft();
+            break;
+        case "ArrowRight":
+            moveDodgerRight();
+            break;
+        default: break;
 
+    }
+    
+  });
+
+
+//   if (e.key === "ArrowLeft") {
+        
+//   }

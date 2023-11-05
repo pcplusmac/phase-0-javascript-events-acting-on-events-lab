@@ -18,6 +18,24 @@ function moveDodgerRight() {
     }
   }
 
+  function moveDodgerUp() {
+    const bottomNumbers = dodger.style.bottom.replace("px", "");
+    const bottom = parseInt(bottomNumbers, 10);
+
+    if (bottom > 0) {
+      dodger.style.bottom = `${bottom + 1}px`;
+    }
+  }
+
+  function moveDodgerDown() {
+    const bottomNumbers = dodger.style.bottom.replace("px", "");
+    const bottom = parseInt(bottomNumbers, 10);
+
+    if (bottom > 0) {
+      dodger.style.bottom = `${bottom - 1}px`;
+    }
+  }
+
 //   Add event listener
 document.addEventListener("keydown", function (e) {
     
@@ -29,6 +47,12 @@ document.addEventListener("keydown", function (e) {
         case "ArrowRight":
             moveDodgerRight();
             break;
+        case "ArrowUp":
+          moveDodgerUp();
+          break;
+        case "ArrowDown":
+          moveDodgerDown();
+          break;
         default: break;
 
     }

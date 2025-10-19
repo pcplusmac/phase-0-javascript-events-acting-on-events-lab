@@ -39,6 +39,7 @@ function moveDodgerRight() {
 //   Add event listener
 document.addEventListener("keydown", function (e) {
     
+    console.log(e)
     // Switch 'e' key value
     switch(e.key) {
         case "ArrowLeft":
